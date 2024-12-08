@@ -67,7 +67,7 @@ const Myprojects = () => {
             <h3>Car Price Alert</h3>
             <small className='text-light'>Selenium | Web Scraping | Google OAuth</small>
             <div className="portfolio__item-cta">
-              <a href="https://github.com/QiaotongHuang/An-end-to-end-book-recommendation-system" target="_blank" rel='noreferrer' className='btn'>Github</a>  
+              <a href="https://github.com/QiaotongHuang/Car_Price_Alert_System" target="_blank" rel='noreferrer' className='btn'>Github</a>  
             </div>
         </article>
 
