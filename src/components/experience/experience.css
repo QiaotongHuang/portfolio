@@ -1,0 +1,125 @@
+.experience-container {
+    font-family: Arial, sans-serif;
+    padding: 0.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    color: #333;
+  }
+
+  .timeline {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .leftside {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 46%; /* Adjust to 50% for equal spacing */
+    padding: 0 1rem;
+    left: 0;
+    height: 100%;
+    margin-right: 2rem;
+  }
+
+  .rightside {
+    display: flex;
+    position: relative;
+    width: 46%;
+    flex-direction: column;
+    right: 0;
+    height: 100%;
+    padding: 0 1rem;
+    margin-left: 2rem;
+  }
+
+  .center {
+    display: flex;
+    width: 8%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .timeline-line {
+    position: absolute;
+    width: 0.3rem;
+    background-color: #ccc;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .timeline-card {
+    position: relative;
+    width: 80%;
+    border-radius: 0.4rem;
+    padding: 0.8rem;
+    margin-bottom: 0.4rem;
+    box-shadow: 0 0.05rem 0.2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-card:hover {
+    /* transform: translateY(-0.2rem); */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-card .tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    z-index: 2;
+  }
+  
+  .timeline-card:hover .tooltip {
+    visibility: visible;
+  }
+
+  .timeline-card.education {
+    background: #df9f15;
+    text-align: left;
+    align-self: flex-start;
+  }
+  
+  .timeline-card.experience {
+    background: #29cd99;
+    text-align: right;
+    align-self: flex-end;
+  }
+  
+  .timeline-card h4 {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .timeline-card p {
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+    color: #555;
+  }
+  
+  .timeline-card .date {
+    font-size: 0.6rem;
+    color: #888;
+    display: block;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline {
+      width: 100%;
+    }
+  }

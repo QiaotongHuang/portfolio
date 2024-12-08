@@ -1,0 +1,97 @@
+.container.contact__container {
+    width: 60%; /* Slightly increased for better spacing */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal columns for symmetry */
+    gap: 2rem; /* Space between the two sections */
+    margin: 0 auto; /* Center the container */
+}
+
+.contact__options,
+.contact__schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    background: var(--color-bg-variant);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    height: 250px; /* Uniform height for both sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+}
+
+.contact__options:hover,
+.contact__schedule:hover {
+    background: var(--color-primary-variant); /* Add a hover effect background */
+    border-color: var(--color-primary);
+    transform: scale(1.02); /* Slight scale effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.contact__option-icon,
+.contact__schedule-icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.contact__option h4,
+.contact__schedule h3 {
+    font-size: 1.3rem; /* Uniform heading size */
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.contact__option a,
+.contact__schedule a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem; /* Slightly larger font for better readability */
+    color: var(--color-white);
+    background: var(--color-primary);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact__option a:hover,
+.contact__schedule a:hover {
+    background: var(--color-primary-variant);
+    color: var(--color-white);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Responsive Adjustments */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .container.contact__container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        gap: 2rem;
+    }
+
+    .contact__options,
+    .contact__schedule {
+        height: auto; /* Allow dynamic height for content */
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+    .container.contact__container {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    .contact__options,
+    .contact__schedule {
+        text-align: center;
+        padding: 1.5rem; /* Reduced padding for smaller devices */
+    }
+
+    .contact__schedule a {
+        width: 100%; /* Full-width button for mobile */
+    }
+}
